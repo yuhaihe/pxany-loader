@@ -1,0 +1,27 @@
+{
+  "name": "pxany-loader",
+  "version": "1.0.0",
+  "description": "px to rem/vw",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirYuye/pxany-loader.git"
+  },
+  "keywords": [
+    "px",
+    "rem",
+    "vw"
+  ],
+  "author": "hayho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SirYuye/pxany-loader/issues"
+  },
+  "homepage": "https://github.com/SirYuye/pxany-loader#readme"
+}

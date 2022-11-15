@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "目标转换单位(rem, vw)",
+      "type": "string",
+      "link": ""
+    },
+    "remUnit": {
+      "description": "rem单位，默认screenWidth/10",
+      "type": "string",
+      "link": ""
+    },
+    "screenWidth": {
+      "description": "设计稿屏幕宽度",
+      "type": "number",
+      "link": ""
+    },
+    "precision": {
+      "description": "保留小数点精度",
+      "type": "number",
+      "link": ""
+    },
+    "extendSuffix": {
+      "description": "扩展单位(pz,pt...)",
+      "type": "array",
+      "link": ""
+    },
+    "minPx": {
+      "description": "最小单位,不转换",
+      "type": "number",
+      "link": ""
+    },
+    "exclude": {
+      "description": "不处理文件",
+      "instanceof": "RegExp",
+      "link": ""
+    }
+  },
+  "required": ["type", "screenWidth"],
+  "additionalProperties": true
+}

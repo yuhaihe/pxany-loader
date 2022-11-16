@@ -45,16 +45,26 @@ vue-cli chainWebpack
       }).end()
   }
 ```
-
+`rem模式需指定根元素 -> html { font-size: ..px } default: width / 10`
 ## Example
 ```
-unit
+extendSuffix: ['px', 'rpx']
+
+rem default --> html { font-size: 37.5px }
 width: 37.5px; -> width: 1rem; 
 width: 37.5rpx; -> width: 1rem; 
 
+remUnit: 75 --> html { font-size: 75px }
+width: 37.5px; -> width: .5rem; 
+width: 37.5rpx; -> width: .5rem; 
+
 no transform
 width: 1px; -> width: 1px; 
-width: 100px; /* no */ -> width: 100px; 
+width: 100px; /* no */ -> width: 100px;
+
+vw
+width: 37.5px; -> width: 10vw; 
+width: 37.5rpx; -> width: 10vw; 
 ```
 
 ## API
@@ -66,7 +76,7 @@ width: 100px; /* no */ -> width: 100px;
     },
     <!-- rem模式remUnit优先级最高  -->
     "remUnit": {
-      "description": "rem单位，默认screenWidth/10",
+      "description": "rem单位,与根元素值应相同，默认screenWidth/10",
       "type": "number",
       "link": ""
     },
@@ -95,4 +105,5 @@ width: 100px; /* no */ -> width: 100px;
       "instanceof": "RegExp",
       "link": ""
     }
+  "required": ["type", "screenWidth"]
 ```

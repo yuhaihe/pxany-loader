@@ -77,3 +77,20 @@ describe('should remUnit be greater than screenWidth/10', function() {
     expect(output).to.equal('body {\n  border: 10.00rem solid #ccc;\n}')
   })
 })
+
+describe('vw', function() {
+  
+  it('should transform px value into vw', function() {
+    const query = Object.assign(options.query, { type: 'vw'})
+    const output = loader.call({ query }, 'body {width: 37.5px;}')
+    expect(output).is.a('string')
+    expect(output).to.equal('body {\n  width: 10.00vw;\n}')
+  })
+
+  it('should no transform px value into vw', function() {
+    const query = Object.assign(options.query, { type: 'vw'})
+    const output = loader.call({ query }, 'body {width: 37.5px; /*no*/}')
+    expect(output).is.a('string')
+    expect(output).to.equal('body {\n  width: 37.5px;\n}')
+  })
+})

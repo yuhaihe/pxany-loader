@@ -8,7 +8,7 @@
     },
     "remUnit": {
       "description": "rem单位，默认screenWidth/10",
-      "type": "string",
+      "type": "number",
       "link": ""
     },
     "screenWidth": {

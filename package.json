@@ -1,7 +1,7 @@
 {
   "name": "pxany-loader",
   "version": "1.0.0",
-  "description": "px to rem/vw",
+  "description": "px/pt/rpx to rem/vw",
   "main": "index.js",
   "directories": {
     "lib": "lib"
